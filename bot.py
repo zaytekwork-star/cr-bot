@@ -1,5 +1,4 @@
 import requests
-print("PUBLIC IP:", requests.get("https://api.ipify.org").text)
 import os
 import json
 import logging
@@ -13,7 +12,7 @@ from telegram.ext import (
     Application, CommandHandler, MessageHandler,
     CallbackQueryHandler, ContextTypes, filters
 )
-
+print("PUBLIC IP:", requests.get("https://api.ipify.org").text)
 # ─── Config ────────────────────────────────────────────────────────────────────
 TELEGRAM_TOKEN   = os.getenv("TELEGRAM_TOKEN", "")
 ROYALE_API_KEY   = os.getenv("ROYALE_API_KEY", "")
